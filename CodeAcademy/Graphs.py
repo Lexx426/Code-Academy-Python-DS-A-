@@ -180,3 +180,18 @@ def dfs(graph, current_vertex, target_value, visited = None):
 # Inside a breadth-first search implementation, you have a for loop of the current vertex’s neighboring vertices. What needs to be true in this loop in order for the path to be returned?
 
 # the neighboring vertex has been visited AND the neighboring vertex has the target value
+
+
+
+# What is wrong with the following pseudocode for Dijkstra’s algorithm?
+
+# - Set all distances to all other vertices from start vertex to infinity
+# - while heap exists:
+#     - pop vertex with mininum distance
+#     - check neighbors of that vertex:
+#           - new distance = distance to vertex + edge weight
+#           - if new distance > current distance:
+#                  - replace current distance with new distance
+# - return distances
+
+# you should be checking if the new distance is less than the current distance

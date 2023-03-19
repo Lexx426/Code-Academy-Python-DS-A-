@@ -1,0 +1,18 @@
+Why does Dijkstra’s algorithm run in O((V+E)log V)?
+
+In the worst case, we will visit all V+E vertices and edges. In each visit, we may have to update our min-heap which takes log V time. This the runtime is O((V+E) log V))
+
+
+Why must we initialize all the distances from the start vertex to infinity at the beginning of Dijkstra’s algorithm?
+
+Since we have nor searched the graph yet, we dont know the distances and thus, we must assume the maximum possible distances
+
+True or False: Dijkstra’s algorithm follows a breadth first search rather than a depth-first-search.
+
+True
+
+Challenge Question: Would Dijkstra’s Algorithm be able to work with negative edge weights?
+
+No -Correct! We always consider the distance up to our current vertex to be the shortest possible distance. However, a negative edge would mean that edges after the current vertex could lead to a shorter distance. This breaks our algorithm
+
+
