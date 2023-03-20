@@ -1,0 +1,17 @@
+Quiz: A* Algorithm: Conceptual
+Why is O(b^d) the better way to describe the runtime of A* in comparison to O((V+E) log V)?
+    better because it does not take into account the vertices and edges that you will not be visiting due to the optimization of A*
+
+Quiz: A* Algorithm: Conceptual
+True or False: A* is a greedy algorithm.
+    True
+
+Which of the following is a good reason to choose Dijkstra’s algorithm instead of A*?
+    Sometimes we want the shortest pathways to several different vertices
+
+True or False: For, A* algorithm, we want to pop off our minimum vertex while taking into consideration the heuristic distance.
+    True
+
+Quiz: A* Algorithm: Conceptual
+Which of the following statements is FALSE?
+    unlike in A*, in Dijkstra’s we iterate through the neighbors of the current vertex
