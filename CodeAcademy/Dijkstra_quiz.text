@@ -16,3 +16,43 @@ Challenge Question: Would Dijkstra’s Algorithm be able to work with negative e
 No -Correct! We always consider the distance up to our current vertex to be the shortest possible distance. However, a negative edge would mean that edges after the current vertex could lead to a shorter distance. This breaks our algorithm
 
 
+True or False: Dijkstra’s algorithm checks all the neighbors of the current vertex.
+
+True
+
+Why do we use heapq to implement Dijkstra’s Algorithm in python?
+
+It allows us to easily pop off the minimum distance and it only takes O(log V) to update the heapq
+
+The following code is the first part of Dijkstra’s algorithm. What should the ??? be?
+
+distances = {}
+previous = {}
+distances[start] = 0
+heap = [(0, start)]
+visited = set()
+for vertex in graph:
+  if vertex is not start:
+    distances[vertex] = ???
+    heapq.heappush(heap, (distances[vertex], vertex))
+
+math.inf
+
+
+What is the purpose of line 2?
+
+while heap:
+  current_distance, current_vertex = heapq.heappop(heap)
+
+pop off the vertex with the minimum distance because in Dijkstra's we want to keep track of the shortest path
+
+What is wrong with the following code?
+
+ for neighbor, edge_weight in graph[current_vertex]:
+    new_distance = current_distance + edge_weight
+    if new_distance == distances[neighbor]:
+      distances[neighbor] = new_distance
+      heapq.heappush(heap, (new_distance, neighbor))
+      previous[neighbor] = current_vertex
+
+      We should check if new_distance < distances[neighbor] instead of if it's equal
