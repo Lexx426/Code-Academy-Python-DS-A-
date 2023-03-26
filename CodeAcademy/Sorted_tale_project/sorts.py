@@ -13,7 +13,7 @@ def bubble_sort(arr, comparison_function):
     print("Bubble sort: There were {0} swaps".format(swaps))
     return arr
 
-def quicksort(list, start, end, comparision_function):
+def quicksort(list, start, end, comparison_function):
     if start >= end:
         return
     pivot_idx = random.randrange(start, end + 1)
