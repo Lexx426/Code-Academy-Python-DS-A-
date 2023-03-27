@@ -11,7 +11,7 @@ def bubble_sort(arr, comparison_function):
                 arr[idx], arr[idx + 1] = arr[idx + 1], arr[idx]
                 swaps += 1
     print("Bubble sort: There were {0} swaps".format(swaps))
-    return arr
+    return arr 
 
 def quicksort(list, start, end, comparison_function):
     if start >= end:
